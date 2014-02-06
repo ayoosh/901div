@@ -135,7 +135,7 @@
 //
  
 // synopsys translate_off
-`include "timescale.v"
+//`include "timescale.v" 901
 // synopsys translate_on
  
 `include "i2c_master_defines.v"

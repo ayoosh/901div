@@ -1,0 +1,14 @@
+Net LEDs_8Bit<0> LOC ="AE24";
+Net LEDs_8Bit<1> LOC ="AD24";
+Net LEDs_8Bit<2> LOC ="AD25";
+Net LEDs_8Bit<3> LOC ="G16";
+Net LEDs_8Bit<4> LOC ="AD26";
+Net LEDs_8Bit<5> LOC ="G15";
+Net LEDs_8Bit<6> LOC ="L18";
+Net LEDs_8Bit<7> LOC ="H18";
+
+#NET clk LOC="AG18";  # Bank 4, Vcco=3.3V, No DCI, 27MHz
+#NET clk LOC="AH17";  # Bank 4, Vcco=3.3V, No DCI, 33MHz
+NET clk LOC="AH15"; # Bank 4, Vcco=3.3V, No DCI, 100MHz
+
+Net RST LOC=U25; // GPIO Dip Switch 1	
