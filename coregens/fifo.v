@@ -165,5 +165,9 @@ output empty;
 
 // synthesis translate_on
 
+// XST black box declaration
+// box_type "black_box"
+// synthesis attribute box_type of fifo is "black_box"
+
 endmodule
 

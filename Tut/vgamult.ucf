@@ -31,8 +31,8 @@ NET D<*>  IOSTANDARD = LVDCI_33;
 NET "blank"					LOC = "AE8"  | IOSTANDARD = LVDCI_33;  #data enable
 NET "hsync"					LOC = "AM12" | IOSTANDARD = LVDCI_33;
 NET "vsync"					LOC = "AM11"  | IOSTANDARD = LVDCI_33;
-NET "clk"					LOC = "AL10" | IOSTANDARD = LVCMOS33 | DRIVE = 24 | SLEW = FAST;
-NET "clk_n"					LOC="AL11" | IOSTANDARD = LVCMOS33 | DRIVE = 24 | SLEW = FAST;
+NET "clk_25"					LOC = "AL10" | IOSTANDARD = LVCMOS33 | DRIVE = 24 | SLEW = FAST;
+NET "clk_25_n"					LOC="AL11" | IOSTANDARD = LVCMOS33 | DRIVE = 24 | SLEW = FAST;
 NET "dvi_rst"           LOC="AK6" |  IOSTANDARD = LVCMOS33;
 
 NET  "scl_tri"        LOC="U27" | SLEW = SLOW |  DRIVE = 6 | TIG |  IOSTANDARD = LVCMOS18;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors

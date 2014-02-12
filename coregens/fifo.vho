@@ -42,6 +42,10 @@ component fifo
 	empty: OUT std_logic);
 end component;
 
+-- Synplicity black box declaration
+attribute syn_black_box : boolean;
+attribute syn_black_box of fifo: component is true;
+
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
 
 -- The following code must appear in the VHDL architecture

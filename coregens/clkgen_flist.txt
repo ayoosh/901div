@@ -1,0 +1,4 @@
+# Output products list for <clkgen>
+clkgen_flist.txt
+clkgen_readme.txt
+clkgen_xmdf.tcl
