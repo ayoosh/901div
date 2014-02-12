@@ -1,0 +1,5 @@
+verilog work "../../901div/coregens/rom.v"
+verilog work "../../901div/dvi_ifc.v"
+verilog work "../../901div/coregens/fifo.v"
+verilog work "clkgen.v"
+verilog work "../../901div/top_level.v"

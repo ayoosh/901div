@@ -1,0 +1,8 @@
+Release 12.2 Drc M.63c (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Tue Feb 04 16:56:14 2014
+
+drc -z top_level.ncd top_level.pcf
+
+DRC detected 0 errors and 0 warnings.

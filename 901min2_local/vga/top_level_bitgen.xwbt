@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Ayoosh\Documents\GitHub\901min2_local\vga\top_level.ncd
+OUTFILE=C:\Users\Ayoosh\Documents\GitHub\901min2_local\vga\top_level.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-3ff1136
+WORKINGDIR=C:\Users\Ayoosh\Documents\GitHub\901min2_local\vga
+LICENSE=ISE
+USER_INFO=0_0_741

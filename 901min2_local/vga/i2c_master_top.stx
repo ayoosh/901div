@@ -1,0 +1,44 @@
+Release 12.2 - xst M.63c (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Ayoosh/Documents/GitHub/901min2_local/vga/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Ayoosh/Documents/GitHub/901min2_local/vga/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../901div/i2c_master_bit_ctrl.v" in library work
+Compiling verilog include file "../../901div/i2c_master_defines.v"
+Compiling verilog file "../../901div/i2c_master_byte_ctrl.v" in library work
+Compiling verilog include file "../../901div/i2c_master_defines.v"
+Module <i2c_master_bit_ctrl> compiled
+Compiling verilog file "../../901div/i2c_master_top.v" in library work
+Compiling verilog include file "../../901div/i2c_master_defines.v"
+Module <i2c_master_byte_ctrl> compiled
+Module <i2c_master_top> compiled
+No errors in compilation
+Analysis of file <"i2c_master_top.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.60 secs
+ 
+--> 
+
+Total memory usage is 206288 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
