@@ -16,5 +16,20 @@ always@(posedge clk, posedge RST) begin
 end
 
 // main body
+rom rom (
+	.clka(clka),
+	.addra(addra), // Bus [12 : 0] 
+	.douta(douta)); // Bus [23 : 0] 
+	
+fifo fifo (
+	.rst(rst),
+	.wr_clk(wr_clk),
+	.rd_clk(rd_clk),
+	.din(din), // Bus [23 : 0] 
+	.wr_en(wr_en),
+	.rd_en(rd_en),
+	.dout(dout), // Bus [23 : 0] 
+	.full(full),
+	.empty(empty));
 
 endmodule
