@@ -18,34 +18,64 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module main_logic(clk, rst, pixel_x, pixel_y, rom_address);
+module main_logic(clk, rst, enable,wr_enable,rom_address);
     input clk;
     input rst;
-    input [9:0] pixel_x;
-    input [9:0] pixel_y;
-   
-    output reg [12:0]rom_address;
-	reg [12:0]start_address;
+	input enable;
+	
+	reg flag;
+	
+	output reg [12:0]rom_address;
+	output reg wr_enable;
+	
+    reg [9:0] pixel_x;
+	reg [9:0] pixel_y;
+   	reg [12:0]start_address;
     
 	always @(posedge clk)begin
 	if(rst)begin
 		rom_address <= 0;
 		start_address <= 0;
+		pixel_x <= 0;
+		pixel_y <= 0;
 	end
-	else begin	
-		if((pixel_x == 10'd0) || (pixel_x == 10'd80) || (pixel_x ==10'd160) || (pixel_x ==10'd240) || (pixel_x == 10'd320) || (pixel_x ==10'd400) || (pixel_x == 10'd480) ||(pixel_x ==10'd560))
-			rom_address <= start_address;
+	else if(enable) begin
+		if(pixel_x == 10'd640)begin
+			pixel_x <= 0;
+			if(pixel_y == 10'd480)
+				pixel_y <= 0;
+			else
+				pixel_y <= pixel_y +1;
+		end
 		else
-			rom_address <= rom_address +1;
-			
+			pixel_x <= pixel_x + 1;
+				
 	
-		if(pixel_x == 640) begin
-			if((pixel_y == 60) || (pixel_y == 120) || (pixel_y == 180) || ( pixel_y == 240) || ( pixel_y == 300) || ( pixel_y == 360) || ( pixel_y == 420) || ( pixel_y == 480)  )
+		if((pixel_x == 10'd0) || (pixel_x == 10'd80) || (pixel_x ==10'd160) || (pixel_x ==10'd240) || (pixel_x == 10'd320) || (pixel_x ==10'd400) || (pixel_x == 10'd480) ||(pixel_x ==10'd560))
+		begin
+			rom_address <= start_address;
+			flag <=1; 
+		end
+		else begin
+			rom_address <= rom_address +1;
+			flag <= 1;
+		end
+			
+		if(pixel_x == 10'd640) begin
+			if((pixel_y == 10'd60) || (pixel_y == 10'd120) || (pixel_y == 10'd180) || ( pixel_y == 10'd240) || ( pixel_y == 10'd300) || ( pixel_y == 10'd360) || ( pixel_y == 10'd420) || ( pixel_y == 10'd480)  )
 				start_address <= 0;
 			else
 				start_address <= start_address + 'd80;
 		end
 	end
+	else begin
+		rom_address <= rom_address;
+		flag <= 0;
+		wr_enable <= 0;
 	end
+	if(flag)begin
+		wr_enable <= 1;
+	end
+end
 	     
 endmodule

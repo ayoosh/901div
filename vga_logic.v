@@ -52,5 +52,5 @@ module vga_logic(clk, rst, blank, comp_sync, hsync, vsync, pixel_x, pixel_y);
 		assign vsync = (pixel_y < 10'd490) || (pixel_y > 10'd491); // 2 cycle pulse
 		assign blank = ~((pixel_x > 10'd639) | (pixel_y > 10'd479));
 		assign comp_sync = 1'b0; // don't know, dont use
-
+	 
 endmodule
