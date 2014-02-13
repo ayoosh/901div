@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/rom.v"
+verilog work "vga_clk.v"
+verilog work "ipcore_dir/fifo.v"
+verilog work "../../GitHub/901div/vga_logic.v"
+verilog work "../../GitHub/901div/main_logic (2).v"
+verilog work "../../GitHub/901div/dvi_ifc.v"
+verilog work "../../GitHub/901div/vgamult.v"
