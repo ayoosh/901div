@@ -1,8 +1,12 @@
-MO rom NULL ../../901div/coregens/rom.v vlg3A/rom.bin 1392174087
+MO clk NULL clk.v vlg32/clk.bin 1392254576
+MO rom NULL ../../coregens/rom.v vlg3A/rom.bin 1392255242
 MO i2c_master_top NULL ../../901div/i2c_master_top.v vlg67/i2c__master__top.bin 1391652298
 MO i2c_master_byte_ctrl NULL ../../901div/i2c_master_byte_ctrl.v vlg5C/i2c__master__byte__ctrl.bin 1391652298
-MO clkgen NULL clkgen.v vlg60/clkgen.bin 1392174087
+MO clkgen NULL clkgen.v vlg60/clkgen.bin 1392253272
+MO vga_clk NULL vga_clk.v vlg5F/vga__clk.bin 1392255242
 MO i2c_master_bit_ctrl NULL ../../901div/i2c_master_bit_ctrl.v vlg07/i2c__master__bit__ctrl.bin 1391652298
-MO dvi_ifc NULL ../../901div/dvi_ifc.v vlg50/dvi__ifc.bin 1392174087
-MO fifo NULL ../../901div/coregens/fifo.v vlg7C/fifo.bin 1392174087
-MO top_level NULL ../../901min2/top_level.v vlg7A/top__level.bin 1391554509
+MO vga_logic NULL ../../vga_logic.v vlg43/vga__logic.bin 1392255242
+MO dvi_ifc NULL ../../dvi_ifc.v vlg50/dvi__ifc.bin 1392255242
+MO main_logic NULL "../../main_logic (2).v" vlg1E/main__logic.bin 1392255242
+MO fifo NULL ../../coregens/fifo.v vlg7C/fifo.bin 1392255242
+MO top_level NULL ../../top_level.v vlg7A/top__level.bin 1392255242

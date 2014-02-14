@@ -5,25 +5,73 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">63</arg> <arg fmt="%s" index="3">expecting &apos;(&apos;, found &apos;,&apos;</arg>
+<msg type="warning" file="Xst" num="863" delta="new" >&quot;<arg fmt="%s" index="1">../../top_level.v</arg>&quot; line <arg fmt="%d" index="2">4</arg>: Name conflict (<arg fmt="%s" index="3">&lt;CLK_100MHZ&gt; and &lt;clk_100mhz&gt;, renaming CLK_100MHZ as clk_100mhz_rnm0</arg>).
 </msg>
 
-<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">66</arg> <arg fmt="%s" index="3">expecting &apos;(&apos;, found &apos;)&apos;</arg>
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../coregens/rom.v</arg>&quot; line <arg fmt="%d" index="2">74</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">rom</arg>&gt;.
 </msg>
 
-<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">70</arg> <arg fmt="%s" index="3">unexpected token: &apos;.&apos;</arg>
+<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">c_state</arg>&gt; of Case statement line <arg fmt="%s" index="2">223</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">c_state</arg>&gt; (optimization is then done without any risk)
+	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
+	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
 </msg>
 
-<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">71</arg> <arg fmt="%s" index="3">unexpected token: &apos;.&apos;</arg>
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">pixel_y</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompilers" num="26" delta="old" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">72</arg> <arg fmt="%s" index="3">unexpected token: &apos;.&apos;</arg>
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">pixel_x</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">73</arg> <arg fmt="%s" index="3">unexpected token: &apos;.&apos;</arg>
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">iic_tx_done</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">../../901div/top_level.v</arg>&quot; line <arg fmt="%d" index="2">74</arg> <arg fmt="%s" index="3">unexpected token: &apos;.&apos;</arg>
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">empty</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">done</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">comp_sync</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">clkn_25mhz</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">clkin_ibufg_out</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">clk_100mhz_rnm0</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">clk_100mhz_buf</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">SDA_BUFFER_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">dvi1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">SDA_BUFFER_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">dvi_ifc</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">start_address_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main_logic</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">start_address_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main_logic</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">start_address_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main_logic</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">start_address_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main_logic</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dvi1/Done</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_level</arg>&gt;.
+</msg>
+
+<msg type="error" file="Xst" num="2033" delta="new" >Port <arg fmt="%s" index="1">I</arg> of Input buffer <arg fmt="%s" index="2">clkgen/CLKIN_IBUFG_INST</arg> is connected to <arg fmt="%s" index="3">GND</arg>
+</msg>
+
+<msg type="error" file="Xst" num="1847" delta="new" >Design checking failed
 </msg>
 
 </messages>

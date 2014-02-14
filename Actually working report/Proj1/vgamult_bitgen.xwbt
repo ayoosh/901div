@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=I:\proj\Proj1\vgamult.ncd
+OUTFILE=I:\proj\Proj1\vgamult.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-3ff1136
+WORKINGDIR=I:\proj\Proj1
+LICENSE=ISE
+USER_INFO=203016412_210573358_205

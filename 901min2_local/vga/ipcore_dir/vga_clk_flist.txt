@@ -1,0 +1,4 @@
+# Output products list for <vga_clk>
+vga_clk_flist.txt
+vga_clk_readme.txt
+vga_clk_xmdf.tcl

@@ -3,14 +3,14 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: top_level.prj
 
@@ -103,7 +103,7 @@ Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
 ---- Other Options
-Cores Search Directories           : {"../../901div/coregens"  }
+Cores Search Directories           : {"../../coregens"  }
 
 =========================================================================
 
@@ -111,29 +111,342 @@ Cores Search Directories           : {"../../901div/coregens"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "../../901div/coregens/rom.v" in library work
-Compiling verilog file "../../901div/dvi_ifc.v" in library work
-Module <rom> compiled
-Compiling verilog file "../../901div/coregens/fifo.v" in library work
+Compiling verilog file "../../vga_logic.v" in library work
+Compiling verilog file "../../main_logic (2).v" in library work
+Module <vga_logic> compiled
+Compiling verilog file "../../dvi_ifc.v" in library work
+Module <main_logic> compiled
+Compiling verilog file "../../coregens/rom.v" in library work
 Module <dvi_ifc> compiled
-Compiling verilog file "clkgen.v" in library work
+Compiling verilog file "../../coregens/fifo.v" in library work
+Module <rom> compiled
+Compiling verilog file "vga_clk.v" in library work
 Module <fifo> compiled
-Compiling verilog file "../../901div/top_level.v" in library work
-Module <clkgen> compiled
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 63 expecting '(', found ','
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 66 expecting '(', found ')'
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 70 unexpected token: '.'
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 71 unexpected token: '.'
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 72 unexpected token: '.'
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 73 unexpected token: '.'
-ERROR:HDLCompilers:26 - "../../901div/top_level.v" line 74 unexpected token: '.'
+Compiling verilog file "../../top_level.v" in library work
+Module <vga_clk> compiled
 Module <top_level> compiled
-Analysis of file <"top_level.prj"> failed.
+No errors in compilation
+Analysis of file <"top_level.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top_level> in library <work>.
+
+Analyzing hierarchy for module <dvi_ifc> in library <work> with parameters.
+	ACK = "1"
+	CLK_FALL = "011"
+	CLK_RATE_MHZ = "00000000000000000000000000011001"
+	CLK_RISE = "101"
+	C_I2C_SLAVE_ADDR = "1110110"
+	DATA0 = "11000000"
+	DATA1 = "00001001"
+	DATA2a = "00000110"
+	DATA2b = "00001000"
+	DATA3a = "00100110"
+	DATA3b = "00010110"
+	DATA4a = "10100000"
+	DATA4b = "01100000"
+	IDLE = "000"
+	INIT = "001"
+	REG_ADDR0 = "01001001"
+	REG_ADDR1 = "00100001"
+	REG_ADDR2 = "00110011"
+	REG_ADDR3 = "00110100"
+	REG_ADDR4 = "00110110"
+	SCK_PERIOD_US = "00000000000000000000000000011110"
+	SDA_BUFFER_MSB = "00000000000000000000000000011011"
+	SETUP = "100"
+	START = "010"
+	START_BIT = "1"
+	STOP_BIT = "0"
+	TRANSITION_CYCLE = "00000000000000000000000101110111"
+	TRANSITION_CYCLE_MSB = "00000000000000000000000000001011"
+	WAIT_IIC = "110"
+	WRITE = "0"
+	XFER_DONE = "111"
+
+Analyzing hierarchy for module <vga_logic> in library <work>.
+
+Analyzing hierarchy for module <main_logic> in library <work>.
+
+Analyzing hierarchy for module <vga_clk> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top_level>.
+WARNING:Xst:863 - "../../top_level.v" line 4: Name conflict (<CLK_100MHZ> and <clk_100mhz>, renaming CLK_100MHZ as clk_100mhz_rnm0).
+WARNING:Xst:2211 - "../../coregens/rom.v" line 74: Instantiating black box module <rom>.
+Module <top_level> is correct for synthesis.
+ 
+Analyzing module <dvi_ifc> in library <work>.
+	ACK = 1'b1
+	CLK_FALL = 3'b011
+	CLK_RATE_MHZ = 32'sb00000000000000000000000000011001
+	CLK_RISE = 3'b101
+	C_I2C_SLAVE_ADDR = 7'b1110110
+	DATA0 = 8'b11000000
+	DATA1 = 8'b00001001
+	DATA2a = 8'b00000110
+	DATA2b = 8'b00001000
+	DATA3a = 8'b00100110
+	DATA3b = 8'b00010110
+	DATA4a = 8'b10100000
+	DATA4b = 8'b01100000
+	IDLE = 3'b000
+	INIT = 3'b001
+	REG_ADDR0 = 8'b01001001
+	REG_ADDR1 = 8'b00100001
+	REG_ADDR2 = 8'b00110011
+	REG_ADDR3 = 8'b00110100
+	REG_ADDR4 = 8'b00110110
+	SCK_PERIOD_US = 32'sb00000000000000000000000000011110
+	SDA_BUFFER_MSB = 32'sb00000000000000000000000000011011
+	SETUP = 3'b100
+	START = 3'b010
+	START_BIT = 1'b1
+	STOP_BIT = 1'b0
+	TRANSITION_CYCLE = 32'sb00000000000000000000000101110111
+	TRANSITION_CYCLE_MSB = 32'sb00000000000000000000000000001011
+	WAIT_IIC = 3'b110
+	WRITE = 1'b0
+	XFER_DONE = 3'b111
+Module <dvi_ifc> is correct for synthesis.
+ 
+Analyzing module <vga_logic> in library <work>.
+Module <vga_logic> is correct for synthesis.
+ 
+Analyzing module <main_logic> in library <work>.
+Module <main_logic> is correct for synthesis.
+ 
+Analyzing module <vga_clk> in library <work>.
+Module <vga_clk> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <vga_clk>.
+    Set user-defined property "CLKDV_DIVIDE =  4.000000" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "DCM_AUTOCALIBRATION =  TRUE" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "DCM_PERFORMANCE_MODE =  MAX_SPEED" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "FACTORY_JF =  F0F0" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "SIM_DEVICE =  VIRTEX5" for instance <DCM_ADV_INST> in unit <vga_clk>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_ADV_INST> in unit <vga_clk>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dvi_ifc>.
+    Related source file is "../../dvi_ifc.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <c_state> of Case statement line 223 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <c_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_0> for signal <c_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 17                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 8                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset_n                   (negative)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 001                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <Done>.
+    Found 32-bit up counter for signal <bit_count>.
+    Found 3-bit comparator lessequal for signal <c_state$cmp_le0000> created at line 292.
+    Found 12-bit up counter for signal <cycle_count>.
+    Found 1-bit register for signal <SCL_out>.
+    Found 28-bit register for signal <SDA_BUFFER>.
+    Found 1-bit register for signal <SDA_out>.
+    Found 3-bit up counter for signal <write_count>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Counter(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <dvi_ifc> synthesized.
+
+
+Synthesizing Unit <vga_logic>.
+    Related source file is "../../vga_logic.v".
+    Found 10-bit register for signal <pixel_x>.
+    Found 10-bit register for signal <pixel_y>.
+    Found 10-bit comparator greater for signal <blank$cmp_gt0000> created at line 53.
+    Found 10-bit comparator greater for signal <blank$cmp_gt0001> created at line 53.
+    Found 10-bit comparator greater for signal <hsync$cmp_gt0000> created at line 51.
+    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 51.
+    Found 10-bit adder for signal <next_pixel_x$addsub0000> created at line 37.
+    Found 10-bit adder for signal <next_pixel_y$addsub0000> created at line 38.
+    Found 10-bit comparator greater for signal <vsync$cmp_gt0000> created at line 52.
+    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 52.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <vga_logic> synthesized.
+
+
+Synthesizing Unit <main_logic>.
+    Related source file is "../../main_logic (2).v".
+    Found 13-bit up counter for signal <rom_address>.
+    Found 1-bit register for signal <wr_enable>.
+    Found 1-bit register for signal <flag>.
+    Found 10-bit up counter for signal <pixel_x>.
+    Found 10-bit up counter for signal <pixel_y>.
+    Found 13-bit up accumulator for signal <start_address>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   1 Accumulator(s).
+	inferred   2 D-type flip-flop(s).
+Unit <main_logic> synthesized.
+
+
+Synthesizing Unit <vga_clk>.
+    Related source file is "vga_clk.v".
+Unit <vga_clk> synthesized.
+
+
+Synthesizing Unit <top_level>.
+    Related source file is "../../top_level.v".
+WARNING:Xst:646 - Signal <pixel_y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pixel_x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iic_tx_done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <empty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <comp_sync> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clkn_25mhz> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <clkin_ibufg_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <clk_100mhz_rnm0> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <clk_100mhz_buf> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit tristate buffer for signal <scl_tri>.
+    Found 1-bit tristate buffer for signal <sda_tri>.
+    Summary:
+	inferred   2 Tristate(s).
+Unit <top_level> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Counters                                             : 6
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Accumulators                                         : 1
+ 13-bit up accumulator                                 : 1
+# Registers                                            : 8
+ 1-bit register                                        : 5
+ 10-bit register                                       : 2
+ 28-bit register                                       : 1
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 2
+ 3-bit comparator lessequal                            : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <dvi1/c_state/FSM> on signal <c_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 001
+ 001   | 000
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 110   | 101
+ 111   | 100
+-------------------
+Reading core <../../coregens/rom.ngc>.
+Reading core <../../coregens/fifo.ngc>.
+Loading core <rom> for timing and area information for instance <rom_inst>.
+Loading core <fifo> for timing and area information for instance <fifo_mod>.
+WARNING:Xst:1710 - FF/Latch <SDA_BUFFER_0> (without init value) has a constant value of 0 in block <dvi1>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Counters                                             : 6
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Accumulators                                         : 1
+ 13-bit up accumulator                                 : 1
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 2
+ 3-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <SDA_BUFFER_0> (without init value) has a constant value of 0 in block <dvi_ifc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <start_address_0> (without init value) has a constant value of 0 in block <main_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <start_address_1> (without init value) has a constant value of 0 in block <main_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <start_address_2> (without init value) has a constant value of 0 in block <main_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <start_address_3> (without init value) has a constant value of 0 in block <main_logic>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <top_level> ...
+
+Optimizing unit <dvi_ifc> ...
+
+Optimizing unit <vga_logic> ...
+
+Optimizing unit <main_logic> ...
+WARNING:Xst:2677 - Node <dvi1/Done> of sequential type is unconnected in block <top_level>.
+
+Mapping all equations...
+ERROR:Xst:2033 - Port I of Input buffer clkgen/CLKIN_IBUFG_INST is connected to GND
+ERROR:Xst:1847 - Design checking failed
 --> 
 
-Total memory usage is 265516 kilobytes
+Total memory usage is 388716 kilobytes
 
-Number of errors   :    7 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

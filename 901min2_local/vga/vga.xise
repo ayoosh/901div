@@ -15,33 +15,41 @@
   <version xil_pn:ise_version="12.2" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="../../901min2/top_level.ucf" xil_pn:type="FILE_UCF">
-      <association xil_pn:name="Implementation"/>
-    </file>
-    <file xil_pn:name="../../901div/top_level.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="../../top_level.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="../../901div/coregens/rom.xco" xil_pn:type="FILE_COREGEN">
+    <file xil_pn:name="../../coregens/rom.xco" xil_pn:type="FILE_COREGEN">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="../../901div/coregens/fifo.xco" xil_pn:type="FILE_COREGEN">
+    <file xil_pn:name="../../coregens/fifo.xco" xil_pn:type="FILE_COREGEN">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="../../901div/dvi_ifc.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="../../dvi_ifc.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="../../901div/coregens/clkgen.xaw" xil_pn:type="FILE_XAW">
+    <file xil_pn:name="../../main_logic (2).v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="../../901div/coregens/rom.xise" xil_pn:type="FILE_COREGENISE">
+    <file xil_pn:name="../../vga_logic.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation"/>
       <association xil_pn:name="Implementation"/>
     </file>
-    <file xil_pn:name="../../901div/coregens/fifo.xise" xil_pn:type="FILE_COREGENISE">
+    <file xil_pn:name="../../../../Win/Desktop/top_level.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation"/>
+    </file>
+    <file xil_pn:name="ipcore_dir/vga_clk.xaw" xil_pn:type="FILE_XAW">
+      <association xil_pn:name="BehavioralSimulation"/>
+      <association xil_pn:name="Implementation"/>
+    </file>
+    <file xil_pn:name="../../coregens/rom.xise" xil_pn:type="FILE_ISE">
+      <association xil_pn:name="Implementation"/>
+    </file>
+    <file xil_pn:name="../../coregens/fifo.xise" xil_pn:type="FILE_ISE">
       <association xil_pn:name="Implementation"/>
     </file>
   </files>
@@ -57,7 +65,7 @@
     <property xil_pn:name="Allow Unmatched Timing Group Constraints" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Asynchronous To Synchronous" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Auto Implementation Compile Order" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Auto Implementation Top" xil_pn:value="false" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Auto Implementation Top" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatic BRAM Packing" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatically Insert glbl Module in the Netlist" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatically Run Generate Target PROM/ACE File" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -161,7 +169,7 @@
     <property xil_pn:name="Ignore User Timing Constraints Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Par" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Module|top_level" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top File" xil_pn:value="../../901div/top_level.v" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top File" xil_pn:value="../../top_level.v" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/top_level" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Include 'uselib Directive in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include SIMPRIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>

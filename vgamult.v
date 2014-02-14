@@ -53,6 +53,7 @@ module vgamult(CLK_100MHZ, RST, hsync, vsync, blank, clk, clk_n, D, dvi_rst, scl
 	 wire clkn_25mhz;
 	 wire comp_sync;
 	 wire [23:0]data_from_rom;
+	 wire flag;
     
 	 //wire shutdown;
 	 
@@ -65,12 +66,25 @@ module vgamult(CLK_100MHZ, RST, hsync, vsync, blank, clk, clk_n, D, dvi_rst, scl
 	 wire scl;
 	 wire full;
 	 wire empty;
-	 
+	 wire ful;
+	 wire rd_fifo;
 	 //DVI Interface
 	 assign dvi_rst = ~(RST|~locked_dcm);
 	 assign D = (clk)? pixel_gbrg[11:0] : pixel_gbrg[23:12];
 	 assign sda_tri = (sda)? 1'bz: 1'b0;
 	 assign scl_tri = (scl)? 1'bz: 1'b0;
+	 
+	 fifo fifo1(
+	.rst(RST|~locked_dcm),
+	.wr_clk(clk_100mhz_buf),
+	.rd_clk(clk),
+	.din(data_from_rom),
+	.wr_en(wr_enable),
+	.rd_en(rd_fifo && ~empty && done),
+	.dout(pixel_gbrg),
+	.full(ful),
+	.almost_full(full),
+	.empty(empty));
 	 
 	 dvi_ifc dvi1(.Clk(clk_25mhz),                     // Clock input
 						.Reset_n(dvi_rst),       // Reset input
@@ -85,16 +99,12 @@ module vgamult(CLK_100MHZ, RST, hsync, vsync, blank, clk, clk_n, D, dvi_rst, scl
 	// diff_clk clk_diff1(clkn_100mhz,  rst, clkn_25mhz, clknin_ibufg_out, clkn_100mhz_buf, lockedn_dcm);
 	vga_clk vga_clk_gen1(CLK_100MHZ, RST, clk_25mhz, clkin_ibufg_out, clk_100mhz_buf, locked_dcm);
 	
-    vga_logic  vgal1(clk, RST|~locked_dcm, blank, comp_sync, hsync, vsync, pixel_x, pixel_y);
+    vga_logic  vgal1(clk, RST|~locked_dcm, blank, comp_sync, hsync, vsync, pixel_x, pixel_y, done, empty, rd_fifo);
 	
-	main_logic main_log(.clk(CLK_100MHZ), .rst(RST|~locked_dcm), .enable(~full), .rom_address(rom_address), .wr_enable(wr_enable));
+	main_logic main_log(.clk(clk_100mhz_buf), .rst(RST|~locked_dcm), .enable(~full && done), .rom_address(rom_address), .flag(wr_enable));
 	
-	rom rom_inst(.clka(CLK_100MHZ),.addra(rom_address),.douta(data_from_rom));
+	rom rom_inst(.clka(clk_100mhz_buf),.addra(rom_address),.douta(data_from_rom));
+		
 	
-	
-	
-	//generate wr_enable and rd_enable
-	
-	fifo fifo_mod(.rst(RST|~locked_dcm),.wr_clk(CLK_100MHZ),.rd_clk(clk),.din(data_from_rom),.wr_en(wr_enable),.rd_en(blank),.dout(pixel_gbrg),.full(full),.empty(empty));
 	 
 endmodule

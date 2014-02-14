@@ -7,11 +7,11 @@
 // \   \   \/     Version : 12.2
 //  \   \         Application : xaw2verilog
 //  /   /         Filename : clkgen.v
-// /___/   /\     Timestamp : 02/11/2014 20:07:32
+// /___/   /\     Timestamp : 02/12/2014 18:51:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: xaw2verilog -intstyle C:/Users/Ayoosh/Documents/GitHub/901div/coregens/clkgen.xaw -st clkgen.v
+//Command: xaw2verilog -intstyle I:/GitHub/901div/coregens/clkgen.xaw -st clkgen.v
 //Design Name: clkgen
 //Device: xc5vlx110t-3ff1136
 //

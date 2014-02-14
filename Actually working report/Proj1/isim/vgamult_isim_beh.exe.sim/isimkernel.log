@@ -1,0 +1,8 @@
+Command line:
+   vgamult_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54198
+
+Thu Feb 13 15:18:31 2014
+

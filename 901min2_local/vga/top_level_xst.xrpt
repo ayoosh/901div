@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Tue Feb 11 21:01:26 2014">
+  <application stringID="Xst" timeStamp="Wed Feb 12 19:34:01 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\12.2\ISE_DS\ISE\\lib\nt64;C:\Xilinx\12.2\ISE_DS\ISE\\bin\nt64;C:\Xilinx\12.2\ISE_DS\PlanAhead\bin;C:\Xilinx\12.2\ISE_DS\ISE\bin\nt64;C:\Xilinx\12.2\ISE_DS\ISE\lib\nt64;C:\Xilinx\12.2\ISE_DS\EDK\bin\nt64;C:\Xilinx\12.2\ISE_DS\EDK\lib\nt64;C:\Xilinx\12.2\ISE_DS\common\bin\nt64;C:\Xilinx\12.2\ISE_DS\common\lib\nt64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;%QUARTUS_ROOTDIR%\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Modeltech_pe_edu_10.3\win32pe_edu"/>
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="Q:\Xilinx.001\ISE_DS\ISE\\lib\nt64;Q:\Xilinx.001\ISE_DS\ISE\\bin\nt64;Q:\Xilinx.001\ISE_DS\common\bin\nt64;Q:\Xilinx.001\ISE_DS\common\lib\nt64;Q:\Xilinx.001\ISE_DS\EDK\bin\nt64;Q:\Xilinx.001\ISE_DS\EDK\lib\nt64;Q:\Xilinx.001\ISE_DS\PlanAhead\bin;Q:\Xilinx.001\ISE_DS\ISE\bin\nt64;Q:\Xilinx.001\ISE_DS\ISE\lib\nt64;Q:\XILINX.001\VFS\SFT_SYSTEM32_X64\;Q:\XILINX.001\VFS\CSIDL_WINDOWS\;C:\Program Files (x86)\Microsoft Application Virtualization Client\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;Z:.;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Java\jdk\bin;C:\Program Files\Java\jdk\jre\bin\client"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,32 +20,36 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="C:\Xilinx\12.2\ISE_DS\ISE\"/>
+          <item stringID="value" value="Q:\Xilinx.001\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
-          <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\12.2\ISE_DS\ISE"/>
+          <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
+          <item stringID="value" value="27005@license.ece.wisc.edu"/>
         </row>
         <row stringID="row" value="4">
-          <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\12.2\ISE_DS\EDK"/>
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="Q:\Xilinx.001\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="Q:\Xilinx.001\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="6">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\12.2\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="Q:\Xilinx.001\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft "/>
         <item stringID="User_EnvOsrelease" value="Service Pack 1  (build 7601)"/>
       </item>
-      <item stringID="User_EnvHost" value="Air-PC"/>
+      <item stringID="User_EnvHost" value="WIN-ECE-07"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i7-2630QM CPU @ 2.00GHz"/>
-          <item stringID="speed" value="1995 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM)2 Duo CPU     E8400  @ 3.00GHz"/>
+          <item stringID="speed" value="2992 MHz"/>
         </row>
       </table>
     </section>
@@ -65,7 +69,7 @@
       <item DEFAULT="NO" label="-rtlview" stringID="XST_RTLVIEW" value="Yes"/>
       <item DEFAULT="AllClockNets" label="-glob_opt" stringID="XST_GLOBOPT" value="AllClockNets"/>
       <item DEFAULT="YES" label="-read_cores" stringID="XST_READCORES" value="YES"/>
-      <item DEFAULT="" label="-sd" stringID="XST_SD" value="{&quot;../../901div/coregens&quot;  }"/>
+      <item DEFAULT="" label="-sd" stringID="XST_SD" value="{&quot;../../coregens&quot;  }"/>
       <item DEFAULT="NO" label="-write_timing_constraints" stringID="XST_WRITETIMINGCONSTRAINTS" value="NO"/>
       <item DEFAULT="NO" label="-cross_clock_analysis" stringID="XST_CROSSCLOCKANALYSIS" value="NO"/>
       <item DEFAULT="/" stringID="XST_HIERARCHYSEPARATOR" value="/"/>
@@ -110,10 +114,44 @@
       <item DEFAULT="YES" label="-equivalent_register_removal" stringID="XST_EQUIVALENTREGISTERREMOVAL" value="YES"/>
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
+    <section stringID="XST_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="2">
+        <item dataType="int" stringID="XST_10BIT_ADDER" value="2"/>
+      </item>
+      <item dataType="int" stringID="XST_COUNTERS" value="6">
+        <item dataType="int" stringID="XST_10BIT_UP_COUNTER" value="2"/>
+        <item dataType="int" stringID="XST_3BIT_UP_COUNTER" value="1"/>
+      </item>
+      <item dataType="int" stringID="XST_ACCUMULATORS" value="1"></item>
+      <item dataType="int" stringID="XST_REGISTERS" value="8">
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="5"/>
+        <item dataType="int" stringID="XST_10BIT_REGISTER" value="2"/>
+        <item dataType="int" stringID="XST_28BIT_REGISTER" value="1"/>
+      </item>
+      <item dataType="int" stringID="XST_COMPARATORS" value="7"></item>
+      <item dataType="int" stringID="XST_TRISTATES" value="2">
+        <item dataType="int" stringID="XST_1BIT_TRISTATE_BUFFER" value="2"/>
+      </item>
+    </section>
+    <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_FSMS" value="1"/>
+      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="2">
+        <item dataType="int" stringID="XST_10BIT_ADDER" value="2"/>
+      </item>
+      <item dataType="int" stringID="XST_COUNTERS" value="6">
+        <item dataType="int" stringID="XST_10BIT_UP_COUNTER" value="2"/>
+        <item dataType="int" stringID="XST_3BIT_UP_COUNTER" value="1"/>
+      </item>
+      <item dataType="int" stringID="XST_ACCUMULATORS" value="1"></item>
+      <item dataType="int" stringID="XST_REGISTERS" value="53">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="53"/>
+      </item>
+      <item dataType="int" stringID="XST_COMPARATORS" value="7"></item>
+    </section>
     <section stringID="XST_ERRORS_STATISTICS">
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="7"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="2"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="19"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="1"/>
     </section>
   </application>
 

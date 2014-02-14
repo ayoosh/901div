@@ -1,0 +1,10 @@
+ISim log file
+Running: I:\proj\Proj1\vgamult_isim_beh.exe -gui -tclbatch isim.cmd -wdb I:/proj/Proj1/vgamult_isim_beh.wdb 
+ISim M.63c (signature 0x7dea747)
+This is a Full version of ISim.
+Time resolution is 1 fs
+# onerror resume
+# wave add /
+No active Database
+# run 1000 ns
+Unable to execute live simulation command.

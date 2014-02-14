@@ -1,0 +1,8 @@
+Release 12.2 Drc M.63c (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Thu Feb 13 18:36:45 2014
+
+drc -z vgamult.ncd vgamult.pcf
+
+DRC detected 0 errors and 0 warnings.
