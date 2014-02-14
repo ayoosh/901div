@@ -74,17 +74,7 @@ module vgamult(CLK_100MHZ, RST, hsync, vsync, blank, clk, clk_n, D, dvi_rst, scl
 	 assign sda_tri = (sda)? 1'bz: 1'b0;
 	 assign scl_tri = (scl)? 1'bz: 1'b0;
 	 
-	 fifo fifo1(
-	.rst(RST|~locked_dcm),
-	.wr_clk(clk_100mhz_buf),
-	.rd_clk(clk),
-	.din(data_from_rom),
-	.wr_en(wr_enable),
-	.rd_en(rd_fifo && ~empty && done),
-	.dout(pixel_gbrg),
-	.full(ful),
-	.almost_full(full),
-	.empty(empty));
+	 fifo fifo1(.rst(RST|~locked_dcm),.wr_clk(clk_100mhz_buf),.rd_clk(clk),.din(data_from_rom),	.wr_en(wr_enable),.rd_en(rd_fifo && ~empty && done),.dout(pixel_gbrg),.full(ful),.almost_full(full),.empty(empty));
 	 
 	 dvi_ifc dvi1(.Clk(clk_25mhz),                     // Clock input
 						.Reset_n(dvi_rst),       // Reset input
@@ -94,16 +84,14 @@ module vgamult(CLK_100MHZ, RST, hsync, vsync, blank, clk, clk_n, D, dvi_rst, scl
 						.IIC_xfer_done(iic_tx_done),        // IIC configuration done
 						.init_IIC_xfer(1'b0)                // IIC configuration request
 						);
-		
-
-	// diff_clk clk_diff1(clkn_100mhz,  rst, clkn_25mhz, clknin_ibufg_out, clkn_100mhz_buf, lockedn_dcm);
-	vga_clk vga_clk_gen1(CLK_100MHZ, RST, clk_25mhz, clkin_ibufg_out, clk_100mhz_buf, locked_dcm);
 	
-    vga_logic  vgal1(clk, RST|~locked_dcm, blank, comp_sync, hsync, vsync, pixel_x, pixel_y, done, empty, rd_fifo);
+	vga_clk vga_clk_gen1(CLK_100MHZ, RST, clk_25mhz, clkin_ibufg_out, clk_100mhz_buf, locked_dcm); // Module generates the buffered 100 MHz Clock and also the 25MHz clock which goes to DVI controller
 	
-	main_logic main_log(.clk(clk_100mhz_buf), .rst(RST|~locked_dcm), .enable(~full && done), .rom_address(rom_address), .flag(wr_enable));
+    vga_logic  vgal1(clk, RST|~locked_dcm, blank, comp_sync, hsync, vsync, pixel_x, pixel_y, done, empty, rd_fifo);// Module generates the control signals for the DVI controller and the read enable for the FIFO
 	
-	rom rom_inst(.clka(clk_100mhz_buf),.addra(rom_address),.douta(data_from_rom));
+	main_logic main_log(.clk(clk_100mhz_buf), .rst(RST|~locked_dcm), .enable(~full && done), .rom_address(rom_address), .flag(wr_enable));//Module generates the address for the rom, taking in write enable
+	
+	rom rom_inst(.clka(clk_100mhz_buf),.addra(rom_address),.douta(data_from_rom)); //Module retrieves the data from the rom based on the address given by the main_logic 
 		
 	
 	 
