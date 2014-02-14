@@ -41,17 +41,18 @@ module main_logic(clk, rst, enable,flag,rom_address);
 		wr_enable <= 0;
 		flag <= 0;
 	end
-	else if(enable) begin
-		if(pixel_x < 10'd639)
+	else if(enable) begin// Generates the pixel_x, pixel_y which act as counters for the address generation
+		if(pixel_x < 10'd639) //Count for the row address to generate the rom address
 			pixel_x <= pixel_x + 1;
 		else begin
 		    pixel_x <= 0;
-			 if(pixel_y < 10'd479)
+			 if(pixel_y < 10'd479)// Bound check for the column
 				pixel_y <= pixel_y +1;
 			 else
 				pixel_y <= 0;
 		end
 						
+	//The logic to set the start address or to roll back to the start address upon completion of a row
 	
 		if((pixel_x == 10'd79) || (pixel_x ==10'd159) || (pixel_x ==10'd239) || (pixel_x == 10'd319) || (pixel_x ==10'd399) || (pixel_x == 10'd479) ||(pixel_x ==10'd559) || (pixel_x == 10'd639))
 		begin
@@ -73,7 +74,7 @@ module main_logic(clk, rst, enable,flag,rom_address);
 				start_address <= start_address + 'd80;
 		end
 	end
-	else begin
+	else begin// Logic to generate the enable signal for the fifo write
 		rom_address <= rom_address;
 		flag <= 0;
 		wr_enable <= 0;

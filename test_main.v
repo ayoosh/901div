@@ -9,7 +9,7 @@ wire wr;
 
 reg [19:0]i;
 
-main_logic m1(.clk(clk), .rst(rst), .enable(enable), .rom_address(ro), .wr_enable(wr));
+main_logic_1 m1(.clk(clk), .rst(rst), .enable(enable), .rom_address(ro), .flag(wr));
 
 initial begin
 	clk = 1;
